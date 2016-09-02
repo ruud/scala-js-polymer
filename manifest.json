@@ -1,0 +1,7 @@
+{
+  "name": "scala-js-polymer",
+  "short_name": "scala-js-polymer",
+  "description": "Polymer app using ScalaJS",
+  "start_url": "/",
+  "display": "standalone"
+}
