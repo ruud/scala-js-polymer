@@ -1,21 +1,21 @@
 package example
 
-import example.polymer.Attribute
+import example.polymer.{Component, Property}
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSExport, ScalaJSDefined}
 
 @JSExport
 @ScalaJSDefined
-class MyExample extends js.Object {
+class MyExample extends Component {
 
-  val is: String = "scala-js-polymer-app"
+  override val is: String = "scala-js-polymer-app"
 
-  def properties = js.Dynamic.literal(
-    "prop1" -> Attribute("String", "Ruud I am")
+  override def properties = js.Dynamic.literal(
+    "prop1" -> Property("String", "Ruud I am")
   )
 
-  def beforeRegister(): Unit = {
+  override def beforeRegister(): Unit = {
     println("beforeRegister executed in ScalaJS")
   }
 
