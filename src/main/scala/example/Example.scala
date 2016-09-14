@@ -1,21 +1,15 @@
 package example
 
 import example.polymer.{Polymer, PolymerComponent}
-import example.wire.MainModule
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSExport
 
-@JSExport
-object MyExampleComponent extends PolymerComponent with MainModule {
+object MyExampleComponent extends PolymerComponent {
 
-  override def build(): Unit = {
+  override def bootstrap(): Unit = {
     println("Polymer component build")
+    // bootstrap Polymer with 'ScalaJsPolymerApp' element
     Polymer(js.constructorOf[ScalaJsPolymerApp])
   }
 
-  @JSExport
-  def buttonClicked(): Unit = {
-    println(earnLotsOfMoney.doIt())
-  }
 }
