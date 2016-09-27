@@ -3,7 +3,12 @@
   "description": "Polymer app using ScalaJS",
   "main": "index.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-card": "PolymerElements/paper-card#^1.1.2",
+    "paper-button": "PolymerElements/paper-button#^1.0.13",
+    "paper-styles": "PolymerElements/paper-styles#^1.1.5",
+    "paper-material": "PolymerElements/paper-material#^1.0.6",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.3.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

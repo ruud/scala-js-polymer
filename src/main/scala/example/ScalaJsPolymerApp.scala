@@ -44,4 +44,12 @@ class ScalaJsPolymerApp extends PolymerElement {
     println(s"Lifecycle - attributeChanged : $aName , $aType")
   }
 
+  def setTextShare(): Unit = {
+    this.prop1 = "Share!!"
+  }
+
+  def setTextExplore(): Unit = {
+    this.prop1 = "Explore!!"
+  }
+
 }
