@@ -1,5 +1,6 @@
 package example
 
+import eu.unicredit.ToDo
 import example.polymer.{PolymerElement, Property}
 import example.wire.WiredModules
 
@@ -29,6 +30,7 @@ class ScalaJsPolymerApp extends PolymerElement {
   override def ready(): Unit = {
     println(WiredModules.earnLotsOfMoney.doIt())
     println("lifecycle - ready")
+    ToDo.start
   }
 
   override def attached(): Unit = {
