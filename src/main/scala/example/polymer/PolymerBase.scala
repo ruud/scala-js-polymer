@@ -1,6 +1,5 @@
 package example.polymer
 
-import example.wire.WiredModules
 import org.scalajs.dom.raw.HTMLElement
 
 import scala.scalajs.js
@@ -13,7 +12,7 @@ object Polymer extends js.Object {
 
 @ScalaJSDefined
 abstract class PolymerElement extends PolymerBase {
-  val is: String
+  def is: String
   def beforeRegister(): Unit
   def properties: js.Dynamic
   def created(): Unit
@@ -28,7 +27,7 @@ abstract class PolymerElement extends PolymerBase {
 abstract class PolymerBase extends HTMLElement
 
 @JSExportDescendentObjects
-trait PolymerComponent {
+trait PolymerApplication {
   @JSExport
   def bootstrap(): Unit
 }

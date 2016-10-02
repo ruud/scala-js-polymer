@@ -1,33 +1,30 @@
 package example
 
-import eu.unicredit.ToDo
+import eu.unicredit.DomActor
 import example.polymer.{PolymerElement, Property}
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.ScalaJSDefined
 
 @ScalaJSDefined
-class ScalaJsPolymerApp extends PolymerElement {
+class TodoInput extends PolymerElement {
 
-  var prop1: String = "initial"
+  override def is: String = "todo-input"
 
-  override def is: String = "scala-js-polymer-app"
+  var todoInputValue: String = "initial"
 
   override def beforeRegister(): Unit = {
-    println("beforeRegister executed for ScalaJsPolymerApp")
+    println("beforeRegister executed for TodoInput")
   }
 
-  override def properties = js.Dynamic.literal(
-    "prop1" -> Property("String", "Green eggs and ham, Sam I am")
-  )
+  override def properties = js.Dynamic.literal()
 
   override def created(): Unit = {
-    println("lifecycle - created")
+    println("Lifecycle - created")
   }
 
   override def ready(): Unit = {
     println("lifecycle - ready")
-    ToDo.start
   }
 
   override def attached(): Unit = {
@@ -40,6 +37,10 @@ class ScalaJsPolymerApp extends PolymerElement {
 
   override def attributeChanged(aName: String, aType: String): Unit = {
     println(s"Lifecycle - attributeChanged : $aName , $aType")
+  }
+
+  def _add(): Unit = {
+    println("Lifecycle - detached")
   }
 
 }

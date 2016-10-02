@@ -1,7 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../import-scalajspolymer.html">
-<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="todo-input.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="todo-icons.html">
 
 <dom-module id="scala-js-polymer-app">
   <template>
@@ -9,25 +13,10 @@
       :host {
         display: block;
       }
-      .input-wrapper {
-        padding-left: 70px;
-      }
-      paper-input {
-        display: inline-block;
-        width: 65%;
-      }
     </style>
-    <div class="input-wrapper">
-      <paper-input id="todoInput"
-                   no-label-float
-                   label="Add an item"
-                   on-keydown="_checkAdd">
-      </paper-input>
-      <paper-button on-tap="_add">Add</paper-button>
-    </div>
     <div id="root"></div>
   </template>
   <script>
-    example.MyExampleComponent().bootstrap();
+    example.MyExampleApplication().bootstrap();
   </script>
 </dom-module>

@@ -20,5 +20,5 @@ libraryDependencies ++= Seq(
     "com.lihaoyi" %%% "utest" % "0.4.3" % "test",
     "com.softwaremill.macwire" %% "macros" % "2.2.3",
     "eu.unicredit" %%% "akkajsactor" % "0.2.4.10",
-    "com.lihaoyi" %%% "scalatags" % "0.5.4"
+    "com.lihaoyi" %%% "scalatags" % "0.6.0"
 )
