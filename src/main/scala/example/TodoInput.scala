@@ -1,7 +1,6 @@
 package example
 
-import eu.unicredit.DomActor
-import example.polymer.{PolymerElement, Property}
+import example.polymer.PolymerElement
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.ScalaJSDefined
@@ -37,10 +36,6 @@ class TodoInput extends PolymerElement {
 
   override def attributeChanged(aName: String, aType: String): Unit = {
     println(s"Lifecycle - attributeChanged : $aName , $aType")
-  }
-
-  def _add(): Unit = {
-    println("Lifecycle - detached")
   }
 
 }
